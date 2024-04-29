@@ -1,0 +1,31 @@
+/* .contenedor-desktop {
+    width: 390px;
+    height: 844px;
+    overflow: hidden;
+    position: relative;
+} */
+.contenedor-mobile {
+    width: 390px;
+    height: 844px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ccc; 
+}
+
+/* .contenedor-mobile img {
+    width: 390px;
+    height: 2759px;
+    position: absolute;
+} */
+
+.video-container video {
+    width: 100%;
+    /* height: 100%; */
+}
+
+/* .large-image-container {
+    width: 1296px;
+    height: 768px;
+    overflow: auto;
+    border: 1px solid #ccc; 
+} */

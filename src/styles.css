@@ -1,0 +1,91 @@
+.shadows-into-light-regular {
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: xxx-large;
+}
+
+.shadows-into-light-regular2 {
+    font-family: "Shadows Into Light", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size:x-large;
+}
+
+.reenie-beanie-regular {
+    font-family: "Reenie Beanie", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#hero {
+    min-height: 100vh;
+    position: relative;
+}
+
+.position {
+    position: relative;
+    z-index: 10;
+}
+
+.rotar1 {
+    transform: rotate(-3deg);
+}
+
+.rotar2 {
+    transform: rotate(5deg);
+}
+
+.rotar3 {
+    transform: rotate(1deg);
+}
+
+p {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 1.5rem;
+    text-align: center;
+
+}
+
+.titulo {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+@media (min-width: 700px) {
+    .titulo {
+        font-size: 4rem;
+    } 
+    p {
+        font-size: 1.5rem
+    }
+}
+
+@media (min-width: 1000px) {
+    .titulo {
+        font-size: 5rem;
+    }
+    p {
+        font-size: 1.5rem
+    }
+}
+
+@media (min-width: 1400px) {
+    .titulo {
+        font-size: 4rem;
+        text-align: left;
+    }
+    p {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+    .articulos {
+        display: flex;
+        gap: 4rem;
+    }
+}

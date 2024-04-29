@@ -1,0 +1,15 @@
+<main id="hero" class="px-0">
+  <app-nav />
+  <router-outlet />
+</main>
+@if (home) {
+<section class="container mt-5 py-4 ">
+  <app-invitacion />
+</section>
+<section class="mt-5 container">
+  <app-form />
+</section>
+}
+<footer class="container">
+  <app-footer />
+</footer>

@@ -1,0 +1,23 @@
+.galeria {
+    display: flex;
+    width: auto;
+    height: auto;
+}
+
+.galeria img {
+    width: 0;
+    /* height: 100vh; */
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.5;
+    filter: saturate(0);
+    transition: 0.75s ease;
+}
+
+.galeria img:hover {
+    filter: saturate(100%);
+    cursor: crosshair;
+    width: 20%;
+    /* height: 100vh; */
+    opacity: 1;
+}

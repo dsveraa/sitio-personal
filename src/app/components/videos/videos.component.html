@@ -1,0 +1,96 @@
+<header class="container py-5">
+    <p class="titulo">Mira esto</p>
+    <section class="articulos">
+        <article>
+            <p>Aquí verás una muestra del estilo de diseño y animación que he podido realizar los ultimos años. Si lo
+                que buscas no está aquí, pero tienes una referencia, simplemente conversemos y lo hacemos. <br /><br />
+                ¡No hay nada imposible! Parte de mi trabajo es solucionar problemas desafiantes.
+            </p>
+        </article>
+        <article class="">
+            <p class="text-secondary">Here you'll see a sample of the design and animation style I've been able to
+                create over the past few years. If what you're looking for isn't here, but you have a reference, just
+                let's talk and we'll make it happen. <br /><br /> Nothing is impossible! Part of my job is solving
+                challenging problems.
+            </p>
+
+        </article>
+    </section>
+</header>
+
+<section class="container-fluid">
+    <div class="row">
+        <div class="col-xl-6 position-relative">
+            <div class="img-container">
+                <img (mouseenter)="playVideo(videoGasco)" (mouseleave)="pauseVideo(videoGasco)" class="img-fluid custom-img" src="../../../assets/img/gasco_3.webp" alt="">
+                <video (mouseenter)="playVideo(videoGasco)" (mouseleave)="pauseVideo(videoGasco)" #videoGasco class="video-overlay" loop (loadedmetadata)="playOnLoad(videoGasco)">
+                    <source src="../../../assets/video/gasco_1.webm" type="video/webm">
+                </video>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <h3>Gasco</h3>
+                <p>Autogas</p>
+            </div>
+        </div>
+        <div class="col-xl-6 position-relative">
+            <div class="img-container">
+                <img (mouseenter)="playVideo(videoVolkswagen)" (mouseleave)="pauseVideo(videoVolkswagen)" class="img-fluid custom-img" src="../../../assets/img/vw_2.webp" alt="">
+                <video (mouseenter)="playVideo(videoVolkswagen)" (mouseleave)="pauseVideo(videoVolkswagen)" #videoVolkswagen class="video-overlay" loop (loadedmetadata)="playOnLoad(videoVolkswagen)">
+                    <source src="../../../assets/video/vw_1.webm" type="video/webm">
+                </video>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <h3>Volkswagen</h3>
+                <p>Last Chance</p>
+            </div>
+        </div>
+        <div class="col-xl-6 position-relative">
+            <div class="img-container">
+                <img (mouseenter)="playVideo(videoZiknes)" (mouseleave)="pauseVideo(videoZiknes)" class="img-fluid custom-img" src="../../../assets/img/zikness_1.webp" alt="">
+                <video (mouseenter)="playVideo(videoZiknes)" (mouseleave)="pauseVideo(videoZiknes)" #videoZiknes class="video-overlay" loop (loadedmetadata)="playOnLoad(videoZiknes)">
+                    <source src="../../../assets/video/ziknes.webm" type="video/webm">
+                </video>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <h3>Ziknes</h3>
+                <p>3D Metal Printer</p>
+            </div>
+        </div>
+        <div class="col-xl-6 position-relative">
+            <div class="img-container">
+                <img (mouseenter)="playVideo(videoMetro)" (mouseleave)="pauseVideo(videoMetro)" class="img-fluid custom-img" src="../../../assets/img/epeukuife_1.webp" alt="">
+                <video (mouseenter)="playVideo(videoMetro)" (mouseleave)="pauseVideo(videoMetro)" #videoMetro class="video-overlay" loop (loadedmetadata)="playOnLoad(videoMetro)">
+                    <source src="../../../assets/video/epeukuife.webm" type="video/webm">
+                </video>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <h3>Ziknes</h3>
+                <p>Mural Preview</p>
+            </div>
+        </div>
+        <div class="col-xl-6 position-relative">
+            <div class="img-container">
+                <img (mouseenter)="playVideo(videoSQM)" (mouseleave)="pauseVideo(videoSQM)" class="img-fluid custom-img" src="../../../assets/img/sqm_1.webp" alt="">
+                <video (mouseenter)="playVideo(videoSQM)" (mouseleave)="pauseVideo(videoSQM)" #videoSQM class="video-overlay" loop (loadedmetadata)="playOnLoad(videoSQM)">
+                    <source src="../../../assets/video/amintec.webm" type="video/webm">
+                </video>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <h3>SQM</h3>
+                <p>Amintec AS</p>
+            </div>
+        </div>
+        <div class="col-xl-6 position-relative">
+            <div class="img-container">
+                <img (mouseenter)="playVideo(videoTelefonica)" (mouseleave)="pauseVideo(videoTelefonica)" class="img-fluid custom-img" src="../../../assets/img/telefonica_1.webp" alt="">
+                <video (mouseenter)="playVideo(videoTelefonica)" (mouseleave)="pauseVideo(videoTelefonica)" #videoTelefonica class="video-overlay" loop (loadedmetadata)="playOnLoad(videoTelefonica)">
+                    <source src="../../../assets/video/recomenzamos.webm" type="video/webm">
+                </video>
+            </div>
+            <div class="d-flex flex-column align-items-center">
+                <h3>Telefónica</h3>
+                <p>Recomenzamos</p>
+            </div>
+        </div>
+    </div>
+</section>

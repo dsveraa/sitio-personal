@@ -1,0 +1,47 @@
+a {
+    color: white;
+    text-decoration:none;
+}
+
+a:hover {
+    color: rgb(251, 201, 0);
+}
+
+.active {
+    /* text-decoration:line-through; */
+    color: rgb(251, 201, 0);
+}
+
+.size {
+    font-size: x-large;
+}
+.slogan-size {
+    font-size: 1.9em;
+}
+.nombre-size {
+    font-size: 2.5em;
+}
+
+@media (min-width: 512px) {
+    .nav-size {
+        font-size: 2.3em;
+    }
+    .slogan-size {
+        font-size: 2.2em;
+    }
+    .nombre-size {
+        font-size: 3em;
+    }
+    
+}
+@media (min-width: 2000px) {
+    .nav-size {
+        font-size: 3.5em;
+    }
+    .slogan-size {
+        font-size: 3.1em;
+    }
+    .nombre-size {
+        font-size: 4em;
+    }
+}
