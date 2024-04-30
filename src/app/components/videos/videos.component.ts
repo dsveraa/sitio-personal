@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-videos',
@@ -15,9 +15,20 @@ export class VideosComponent {
   @ViewChild('videoSQM') videoSQM!: ElementRef<HTMLVideoElement>;
   @ViewChild('videoTelefonica') videoTelefonica!: ElementRef<HTMLVideoElement>;
 
-  constructor() {}
+  constructor() { 
+    window.addEventListener('scroll', function(){
+      let animacion = document.getElementById('animado');
+      let positionObj = animacion?.getBoundingClientRect().top;
+      console.log(positionObj);
+      let tamanoPantalla = window.innerHeight/2;
 
-  playVideo(video: HTMLVideoElement) {
+      if (positionObj! < tamanoPantalla) {
+        animacion!.style.animation = 'mover 1s ease-out';
+      }
+    })
+  }  
+  
+    playVideo(video: HTMLVideoElement) {
     video.currentTime = 0;
     video.play();
   }
@@ -29,5 +40,4 @@ export class VideosComponent {
   playOnLoad(video: HTMLVideoElement) {
     this.playVideo(video);
   }
-
 }
