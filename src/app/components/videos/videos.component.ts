@@ -53,5 +53,9 @@ export class VideosComponent implements OnInit {
   gascoAutogas() {
     this.router.navigate(['/gasco-autogas']);
   }
+  
+  vwLastChance() {
+    this.router.navigate(['/volkswagen-last-chance']);
+  }
 
 }
