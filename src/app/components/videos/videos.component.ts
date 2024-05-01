@@ -1,4 +1,9 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { VideosRecomendadosService } from '../../services/videos-recomendados.service';
+import { BoxAnimationService } from '../../services/box-animation.service';
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-videos',
@@ -7,7 +12,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   templateUrl: './videos.component.html',
   styleUrl: './videos.component.css'
 })
-export class VideosComponent {
+export class VideosComponent implements OnInit {
   @ViewChild('videoGasco') videoGasco!: ElementRef<HTMLVideoElement>;
   @ViewChild('videoVolkswagen') videoVolkswagen!: ElementRef<HTMLVideoElement>;
   @ViewChild('videoZiknes') videoZiknes!: ElementRef<HTMLVideoElement>;
@@ -15,20 +20,20 @@ export class VideosComponent {
   @ViewChild('videoSQM') videoSQM!: ElementRef<HTMLVideoElement>;
   @ViewChild('videoTelefonica') videoTelefonica!: ElementRef<HTMLVideoElement>;
 
-  constructor() { 
-    window.addEventListener('scroll', function(){
-      let animacion = document.getElementById('animado');
-      let positionObj = animacion?.getBoundingClientRect().top;
-      console.log(positionObj);
-      let tamanoPantalla = window.innerHeight/2;
+  constructor(
+    private animationService: BoxAnimationService,
+    private videosRecomendadosService: VideosRecomendadosService,
+    private router: Router,
+  ) { }
 
-      if (positionObj! < tamanoPantalla) {
-        animacion!.style.animation = 'mover 1s ease-out';
-      }
+  ngOnInit(): void {
+    window.addEventListener('scroll', () => {
+      this.animationService.animateElement('box');
+      this.animationService.animateElement('box2');
     })
-  }  
-  
-    playVideo(video: HTMLVideoElement) {
+  }
+
+  playVideo(video: HTMLVideoElement) {
     video.currentTime = 0;
     video.play();
   }
@@ -40,4 +45,13 @@ export class VideosComponent {
   playOnLoad(video: HTMLVideoElement) {
     this.playVideo(video);
   }
+
+  asignarVideoActual(id: number) {
+    this.videosRecomendadosService.modelarRecomendados(id);
+  }
+
+  gascoAutogas() {
+    this.router.navigate(['/gasco-autogas']);
+  }
+
 }
