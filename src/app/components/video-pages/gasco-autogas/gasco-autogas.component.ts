@@ -1,4 +1,5 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { RecomendadosComponent } from '../../recomendados/recomendados.component';
 
 @Component({
@@ -10,14 +11,19 @@ import { RecomendadosComponent } from '../../recomendados/recomendados.component
 })
 export class GascoAutogasComponent {
 
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
+
+
   @ViewChild('ancla') ancla: ElementRef;
 
   ngAfterViewInit(): void {
-      this.scrollAncla();
+    this.scrollAncla();
   }
 
   scrollAncla() {
+    if (isPlatformBrowser(this.platformId)) {
       this.ancla.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
 }
