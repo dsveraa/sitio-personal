@@ -15,12 +15,12 @@ export class VideosRecomendadosService {
   }
 
   listaVideos = [
-    "Gasco autogas",
-    "Volkswagen last chance",
-    "Ziknes 3d printer",
-    "Metro mural",
-    "SQM amintec as",
-    "Telefonica recomenzamos",
+    "<app-gasco-autogas-thumbnail/>",
+    "<app-volkswagen-last-chance-thumbnail/>",
+    "<app-ziknes-thumbnail/>",
+    "<app-metro-mural-thumbnail/>",
+    "<app-sqm-amintec-thumbnail/>",
+    "<app-telefonica-recomenzamos-thumbnail/>"
   ]
 
   modelarRecomendados(id: number) {
@@ -56,7 +56,8 @@ export class VideosRecomendadosService {
         this.listaVideos[this.videoActual + 2]
       );
     }
-    
+
     this.recomendados = seleccion;
+    console.log(this.recomendados);
   }
 }

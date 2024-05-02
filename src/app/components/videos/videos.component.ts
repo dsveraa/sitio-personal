@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { VideosRecomendadosService } from '../../services/videos-recomendados.service';
-import { BoxAnimationService } from '../../services/box-animation.service';
+// import { BoxAnimationService } from '../../services/box-animation.service';
 import { Router } from '@angular/router';
 
 
@@ -21,16 +21,16 @@ export class VideosComponent implements OnInit {
   @ViewChild('videoTelefonica') videoTelefonica!: ElementRef<HTMLVideoElement>;
 
   constructor(
-    private animationService: BoxAnimationService,
+    // private animationService: BoxAnimationService,
     private videosRecomendadosService: VideosRecomendadosService,
     private router: Router,
   ) { }
 
   ngOnInit(): void {
-    window.addEventListener('scroll', () => {
-      this.animationService.animateElement('box');
-      this.animationService.animateElement('box2');
-    })
+    // window.addEventListener('scroll', () => {
+    //   this.animationService.animateElement('box');
+    //   this.animationService.animateElement('box2');
+    // })
   }
 
   playVideo(video: HTMLVideoElement) {
