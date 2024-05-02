@@ -45,3 +45,4 @@ Thumbs.db
 test/
 .angular/cache/
 src/assets/svg
+src/source/
