@@ -16,10 +16,13 @@
 <div class="container">
     <div class="d-flex flex-column align-items-center gap-5">
         <div class="video-container">
-            <video autoplay loop [playsInline]="true">
+            <video autoplay loop muted [playsInline]="true" (loadedmetadata)="videoLoaded()">
                 <source src="../../../assets/video/musicarte-responsive-w1400.webm" type="video/webm">
                 <source src="../../../assets/video/musicarte-responsive-w1400.mp4" type="video/mp4">
             </video>
+            @if (showLoader) {
+                <app-video-loader/>
+            }
         </div>
         <!-- <div class="large-image-container">
             <img src="../../../assets/img/desktop-musicarte.png" alt="Imagen grande">

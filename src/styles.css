@@ -135,3 +135,8 @@ p {
 h3 {
     font-size: 1rem;
 }
+
+.pointer {
+    cursor: pointer;
+}
+

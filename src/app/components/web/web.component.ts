@@ -1,13 +1,23 @@
 import { Component, ElementRef, ViewChild, HostListener } from '@angular/core';
+import { VideoLoaderComponent } from '../video-loader/video-loader.component';
 
 @Component({
   selector: 'app-web',
   standalone: true,
-  imports: [],
+  imports: [
+    VideoLoaderComponent
+  ],
   templateUrl: './web.component.html',
   styleUrl: './web.component.css'
 })
 export class WebComponent {
+
+  showLoader = true;
+
+  videoLoaded() {
+    this.showLoader = false; 
+  }
+
 //   @ViewChild('contenedorMobile') contenedor!: ElementRef;
 
 //   isDragging = false;

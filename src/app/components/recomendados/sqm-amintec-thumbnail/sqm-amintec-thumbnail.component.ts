@@ -1,26 +1,22 @@
 import { Component } from '@angular/core';
-import { VideosRecomendadosService } from '../../../services/videos-recomendados.service';
-import { Router } from '@angular/router';
+import { RouterLink } from '@angular/router';
+import { VideoActualService } from '../../../services/video-actual.service';
 
 @Component({
   selector: 'app-sqm-amintec-thumbnail',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './sqm-amintec-thumbnail.component.html',
   styleUrl: './sqm-amintec-thumbnail.component.css'
 })
 export class SqmAmintecThumbnailComponent {
 
   constructor(
-    private videosRecomendadosService: VideosRecomendadosService,
-    private router: Router,
+    private videoActualService: VideoActualService,
   ) {}
 
-  asignarVideoActual(id: number) {
-    this.videosRecomendadosService.modelarRecomendados(id);
+  enviarNumero(id: number) {
+    this.videoActualService.enviarNumero(id);
   }
 
-  go() {
-    this.router.navigate(['/sqm-amintec']);
-  }
 }

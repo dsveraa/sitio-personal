@@ -1,0 +1,19 @@
+.galeria {
+    display: flex;
+    width: auto;
+    height: auto;
+}
+
+.galeria .componente {
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    filter: saturate(0.5);
+    transition: 0.75s ease;
+}
+
+.galeria .componente:hover {
+    filter: saturate(100%);
+    opacity: 1;
+}
