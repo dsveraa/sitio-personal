@@ -44,4 +44,4 @@ Thumbs.db
 # Custom
 test/
 .angular/cache/
-src/source/
+src/assets/source/
