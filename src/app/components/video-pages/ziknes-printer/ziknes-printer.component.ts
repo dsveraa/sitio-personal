@@ -3,13 +3,13 @@ import { RecomendadosComponent } from '../../recomendados/recomendados.component
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({
-  selector: 'app-volkswagen-last-chance',
+  selector: 'app-ziknes-printer',
   standalone: true,
   imports: [RecomendadosComponent],
-  templateUrl: './volkswagen-last-chance.component.html',
-  styleUrl: './volkswagen-last-chance.component.css'
+  templateUrl: './ziknes-printer.component.html',
+  styleUrl: './ziknes-printer.component.css'
 })
-export class VolkswagenLastChanceComponent {
+export class ZiknesPrinterComponent {
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
@@ -27,3 +27,4 @@ export class VolkswagenLastChanceComponent {
   }
 
 }
+

@@ -3,13 +3,13 @@ import { VideosRecomendadosService } from '../../../services/videos-recomendados
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-gasco-autogas-thumbnail',
+  selector: 'app-sqm-amintec-thumbnail',
   standalone: true,
   imports: [],
-  templateUrl: './gasco-autogas-thumbnail.component.html',
-  styleUrl: './gasco-autogas-thumbnail.component.css'
+  templateUrl: './sqm-amintec-thumbnail.component.html',
+  styleUrl: './sqm-amintec-thumbnail.component.css'
 })
-export class GascoAutogasThumbnailComponent {
+export class SqmAmintecThumbnailComponent {
 
   constructor(
     private videosRecomendadosService: VideosRecomendadosService,
@@ -21,6 +21,6 @@ export class GascoAutogasThumbnailComponent {
   }
 
   go() {
-    this.router.navigate(['/gasco-autogas']);
+    this.router.navigate(['/sqm-amintec']);
   }
 }

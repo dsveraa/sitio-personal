@@ -3,13 +3,13 @@ import { RecomendadosComponent } from '../../recomendados/recomendados.component
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({
-  selector: 'app-volkswagen-last-chance',
+  selector: 'app-metro-mural',
   standalone: true,
   imports: [RecomendadosComponent],
-  templateUrl: './volkswagen-last-chance.component.html',
-  styleUrl: './volkswagen-last-chance.component.css'
+  templateUrl: './metro-mural.component.html',
+  styleUrl: './metro-mural.component.css'
 })
-export class VolkswagenLastChanceComponent {
+export class MetroMuralComponent {
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 

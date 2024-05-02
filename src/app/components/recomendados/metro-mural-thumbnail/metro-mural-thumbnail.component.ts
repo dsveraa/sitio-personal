@@ -2,15 +2,16 @@ import { Component } from '@angular/core';
 import { VideosRecomendadosService } from '../../../services/videos-recomendados.service';
 import { Router } from '@angular/router';
 
+
 @Component({
-  selector: 'app-gasco-autogas-thumbnail',
+  selector: 'app-metro-mural-thumbnail',
   standalone: true,
   imports: [],
-  templateUrl: './gasco-autogas-thumbnail.component.html',
-  styleUrl: './gasco-autogas-thumbnail.component.css'
+  templateUrl: './metro-mural-thumbnail.component.html',
+  styleUrl: './metro-mural-thumbnail.component.css'
 })
-export class GascoAutogasThumbnailComponent {
-
+export class MetroMuralThumbnailComponent {
+  
   constructor(
     private videosRecomendadosService: VideosRecomendadosService,
     private router: Router,
@@ -21,6 +22,6 @@ export class GascoAutogasThumbnailComponent {
   }
 
   go() {
-    this.router.navigate(['/gasco-autogas']);
+    this.router.navigate(['/metro-mural']);
   }
 }

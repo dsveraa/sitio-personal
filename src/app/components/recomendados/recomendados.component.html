@@ -1,15 +1,12 @@
-<div class="col-12 text-center mb-2 ">
+<div class="col-12 text-center mb-2 mt-5">
     <h4>Mira también...</h4>
 </div>
-@for (recomendado of recomendados; track recomendados) {
-    {{ recomendado }}
-}
-<div class="col-4">
-    <div class="box"></div>
-</div>
-<div class="col-4">
-    <div class="box"></div>
-</div>
-<div class="col-4">
-    <div class="box"></div>
+<div class="container-fluid">
+    <div class="row">
+        @for (seleccion of recomendados; track recomendados) {
+                <div class="col-12 col-sm-4">
+                    <ng-container *ngComponentOutlet="seleccion"></ng-container>
+                </div>
+                }
+    </div>
 </div>

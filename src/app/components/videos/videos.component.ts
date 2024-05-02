@@ -1,14 +1,13 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { VideosRecomendadosService } from '../../services/videos-recomendados.service';
-import { BoxAnimationService } from '../../services/box-animation.service';
-import { Router } from '@angular/router';
-
-
+// import { VideosRecomendadosService } from '../../services/videos-recomendados.service';
+// import { BoxAnimationService } from '../../services/box-animation.service';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { VideoActualService } from '../../services/video-actual.service';
 
 @Component({
   selector: 'app-videos',
   standalone: true,
-  imports: [],
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './videos.component.html',
   styleUrl: './videos.component.css'
 })
@@ -21,39 +20,35 @@ export class VideosComponent implements OnInit {
   @ViewChild('videoTelefonica') videoTelefonica!: ElementRef<HTMLVideoElement>;
 
   constructor(
-    private animationService: BoxAnimationService,
-    private videosRecomendadosService: VideosRecomendadosService,
+    // private animationService: BoxAnimationService,
+    // private videosRecomendadosService: VideosRecomendadosService,
+    private videoActualService: VideoActualService,
     private router: Router,
   ) { }
-
-  ngOnInit(): void {
-    window.addEventListener('scroll', () => {
-      this.animationService.animateElement('box');
-      this.animationService.animateElement('box2');
-    })
+  
+  enviarNumero(numero: number) {
+    this.videoActualService.enviarNumero(numero);
   }
 
+  ngOnInit(): void {
+    // window.addEventListener('scroll', () => {
+    //   this.animationService.animateElement('box');
+    //   this.animationService.animateElement('box2');
+    // })
+  }
   playVideo(video: HTMLVideoElement) {
     video.currentTime = 0;
     video.play();
   }
-
   pauseVideo(video: HTMLVideoElement) {
     video.pause();
   }
-
   playOnLoad(video: HTMLVideoElement) {
     this.playVideo(video);
   }
-
-  asignarVideoActual(id: number) {
-    this.videosRecomendadosService.modelarRecomendados(id);
-  }
-
   gascoAutogas() {
     this.router.navigate(['/gasco-autogas']);
   }
-  
   vwLastChance() {
     this.router.navigate(['/volkswagen-last-chance']);
   }
