@@ -42,6 +42,6 @@ testem.log
 Thumbs.db
 
 # Custom
-test/
 .angular/cache/
 src/assets/source/
+src/app/test/
