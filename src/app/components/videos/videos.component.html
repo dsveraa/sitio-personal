@@ -1,3 +1,5 @@
+<router-outlet/>
+
 <header class="container py-5">
     <p class="titulo">Mira esto</p>
     <section class="articulos">
@@ -22,8 +24,8 @@
     <div class="row">
         <div class="col-xl-6 pb-4">
             <div class="img-container">
-                <img (click)="gascoAutogas()" (click)="asignarVideoActual(0)" (mouseenter)="playVideo(videoGasco)" (mouseleave)="pauseVideo(videoGasco)" class="img-fluid custom-img" src="../../../assets/img/gasco_3.webp" alt="">
-                <video (click)="gascoAutogas()" (click)="asignarVideoActual(0)"(mouseenter)="playVideo(videoGasco)" (mouseleave)="pauseVideo(videoGasco)" #videoGasco class="video-overlay" loop muted (loadedmetadata)="playOnLoad(videoGasco)">
+                <img routerLink="/gasco-autogas" (click)="enviarNumero(0)" (mouseenter)="playVideo(videoGasco)" (mouseleave)="pauseVideo(videoGasco)" class="img-fluid custom-img" src="../../../assets/img/gasco_3.webp" alt="">
+                <video routerLink="/gasco-autogas" (click)="enviarNumero(0)"(mouseenter)="playVideo(videoGasco)" (mouseleave)="pauseVideo(videoGasco)" #videoGasco class="video-overlay" loop muted (loadedmetadata)="playOnLoad(videoGasco)">
                     <source src="../../../assets/video/gasco_1.webm" type="video/webm">
                 </video>
             </div>
@@ -33,8 +35,8 @@
         </div>
         <div class="col-xl-6 pb-4">
             <div class="img-container">
-                <img (click)="vwLastChance()" (click)="asignarVideoActual(1)" (mouseenter)="playVideo(videoVolkswagen)" (mouseleave)="pauseVideo(videoVolkswagen)" class="img-fluid custom-img" src="../../../assets/img/vw_2.webp" alt="">
-                <video (click)="vwLastChance()" (click)="asignarVideoActual(1)" (mouseenter)="playVideo(videoVolkswagen)" (mouseleave)="pauseVideo(videoVolkswagen)" #videoVolkswagen class="video-overlay" loop muted (loadedmetadata)="playOnLoad(videoVolkswagen)">
+                <img routerLink="/volkswagen-last-chance" (click)="enviarNumero(1)" (mouseenter)="playVideo(videoVolkswagen)" (mouseleave)="pauseVideo(videoVolkswagen)" class="img-fluid custom-img" src="../../../assets/img/vw_2.webp" alt="">
+                <video routerLink="/volkswagen-last-chance" (click)="enviarNumero(1)" (mouseenter)="playVideo(videoVolkswagen)" (mouseleave)="pauseVideo(videoVolkswagen)" #videoVolkswagen class="video-overlay" loop muted (loadedmetadata)="playOnLoad(videoVolkswagen)">
                     <source src="../../../assets/video/vw_1.webm" type="video/webm">
                 </video>
             </div>
@@ -44,8 +46,8 @@
         </div>
         <div class="col-xl-6 pb-4">
             <div class="img-container">
-                <img (mouseenter)="playVideo(videoZiknes)" (mouseleave)="pauseVideo(videoZiknes)" class="img-fluid custom-img" src="../../../assets/img/zikness_1.webp" alt="">
-                <video (mouseenter)="playVideo(videoZiknes)" (mouseleave)="pauseVideo(videoZiknes)" #videoZiknes class="video-overlay" loop muted (loadedmetadata)="playOnLoad(videoZiknes)">
+                <img routerLink="/ziknes-printer" (click)="enviarNumero(2)" (mouseenter)="playVideo(videoZiknes)" (mouseleave)="pauseVideo(videoZiknes)" class="img-fluid custom-img" src="../../../assets/img/zikness_1.webp" alt="">
+                <video routerLink="/ziknes-printer" (click)="enviarNumero(2)" (mouseenter)="playVideo(videoZiknes)" (mouseleave)="pauseVideo(videoZiknes)" #videoZiknes class="video-overlay" loop muted (loadedmetadata)="playOnLoad(videoZiknes)">
                     <source src="../../../assets/video/ziknes.webm" type="video/webm">
                 </video>
             </div>
@@ -55,8 +57,8 @@
         </div>
         <div class="col-xl-6 pb-4">
             <div class="img-container">
-                <img (mouseenter)="playVideo(videoMetro)" (mouseleave)="pauseVideo(videoMetro)" class="img-fluid custom-img" src="../../../assets/img/epeukuife_1.webp" alt="">
-                <video (mouseenter)="playVideo(videoMetro)" (mouseleave)="pauseVideo(videoMetro)" #videoMetro class="video-overlay" loop muted (loadedmetadata)="playOnLoad(videoMetro)">
+                <img routerLink="/metro-mural" (click)="enviarNumero(3)" (mouseenter)="playVideo(videoMetro)" (mouseleave)="pauseVideo(videoMetro)" class="img-fluid custom-img" src="../../../assets/img/epeukuife_1.webp" alt="">
+                <video routerLink="/metro-mural" (click)="enviarNumero(3)" (mouseenter)="playVideo(videoMetro)" (mouseleave)="pauseVideo(videoMetro)" #videoMetro class="video-overlay" loop muted (loadedmetadata)="playOnLoad(videoMetro)">
                     <source src="../../../assets/video/epeukuife.webm" type="video/webm">
                 </video>
             </div>
@@ -67,8 +69,8 @@
         </div>
         <div class="col-xl-6 pb-4">
             <div class="img-container">
-                <img (mouseenter)="playVideo(videoSQM)" (mouseleave)="pauseVideo(videoSQM)" class="img-fluid custom-img" src="../../../assets/img/sqm_1.webp" alt="">
-                <video (mouseenter)="playVideo(videoSQM)" (mouseleave)="pauseVideo(videoSQM)" #videoSQM class="video-overlay" loop muted (loadedmetadata)="playOnLoad(videoSQM)">
+                <img routerLink="/sqm-amintec" (click)="enviarNumero(4)" (mouseenter)="playVideo(videoSQM)" (mouseleave)="pauseVideo(videoSQM)" class="img-fluid custom-img" src="../../../assets/img/sqm_1.webp" alt="">
+                <video routerLink="/sqm-amintec" (click)="enviarNumero(4)" (mouseenter)="playVideo(videoSQM)" (mouseleave)="pauseVideo(videoSQM)" #videoSQM class="video-overlay" loop muted (loadedmetadata)="playOnLoad(videoSQM)">
                     <source src="../../../assets/video/amintec.webm" type="video/webm">
                 </video>
             </div>
@@ -78,8 +80,8 @@
         </div>
         <div class="col-xl-6 pb-4">
             <div class="img-container">
-                <img (mouseenter)="playVideo(videoTelefonica)" (mouseleave)="pauseVideo(videoTelefonica)" class="img-fluid custom-img" src="../../../assets/img/telefonica_1.webp" alt="">
-                <video (mouseenter)="playVideo(videoTelefonica)" (mouseleave)="pauseVideo(videoTelefonica)" #videoTelefonica class="video-overlay" loop muted (loadedmetadata)="playOnLoad(videoTelefonica)">
+                <img routerLink="/telefonica-recomenzamos" (click)="enviarNumero(5)" (mouseenter)="playVideo(videoTelefonica)" (mouseleave)="pauseVideo(videoTelefonica)" class="img-fluid custom-img" src="../../../assets/img/telefonica_1.webp" alt="">
+                <video routerLink="/telefonica-recomenzamos" (click)="enviarNumero(5)" (mouseenter)="playVideo(videoTelefonica)" (mouseleave)="pauseVideo(videoTelefonica)" #videoTelefonica class="video-overlay" loop muted (loadedmetadata)="playOnLoad(videoTelefonica)">
                     <source src="../../../assets/video/recomenzamos.webm" type="video/webm">
                 </video>
             </div>

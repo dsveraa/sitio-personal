@@ -8,10 +8,10 @@ export class VideosRecomendadosService {
   constructor() { }
 
   videoActual!: number;
-  _recomendados: string[] = [];
+  recomendados: string[] = [];
 
   get videosRecomendados() {
-    return this._recomendados;
+    return this.recomendados;
   }
 
   listaVideos = [
@@ -37,7 +37,6 @@ export class VideosRecomendadosService {
         this.listaVideos[2],
         this.listaVideos[3]
       );
-      console.log(seleccion)
     } else if (this.videoActual === this.listaVideos.length - 1) {
       seleccion.push(
         this.listaVideos[this.videoActual - 3],
@@ -57,8 +56,9 @@ export class VideosRecomendadosService {
         this.listaVideos[this.videoActual + 2]
       );
     }
+    
+    this.recomendados = seleccion;
+    console.log(this.recomendados);
 
-    this._recomendados = seleccion;
-    // console.log(this._recomendados);
   }
 }

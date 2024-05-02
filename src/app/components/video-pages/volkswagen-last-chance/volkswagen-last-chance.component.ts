@@ -2,7 +2,6 @@ import { Component, ElementRef, Inject, PLATFORM_ID, ViewChild } from '@angular/
 import { RecomendadosComponent } from '../../recomendados/recomendados.component';
 import { isPlatformBrowser } from '@angular/common';
 
-
 @Component({
   selector: 'app-volkswagen-last-chance',
   standalone: true,

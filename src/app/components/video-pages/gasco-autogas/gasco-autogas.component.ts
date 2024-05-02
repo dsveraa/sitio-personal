@@ -1,6 +1,6 @@
 import { Component, ViewChild, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
 import { RecomendadosComponent } from '../../recomendados/recomendados.component';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-gasco-autogas',
