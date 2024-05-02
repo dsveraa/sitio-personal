@@ -1,9 +1,7 @@
 <div class="col-12 text-center mb-2 ">
     <h4>Mira también...</h4>
 </div>
-@for (recomendado of recomendados; track recomendados) {
-    <div class="col-4">
-        <div class="box">{{ recomendado }}</div>
-    </div>
+@for (data of compo; track compo) {
+    <ng-container *ngComponentOutlet="data"></ng-container>
 }
 

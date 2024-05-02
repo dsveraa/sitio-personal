@@ -6,6 +6,7 @@ import { ZiknesThumbnailComponent } from './ziknes-thumbnail/ziknes-thumbnail.co
 import { MetroMuralThumbnailComponent } from './metro-mural-thumbnail/metro-mural-thumbnail.component';
 import { SqmAmintecThumbnailComponent } from './sqm-amintec-thumbnail/sqm-amintec-thumbnail.component';
 import { TelefonicaRecomenzamosThumbnailComponent } from './telefonica-recomenzamos-thumbnail/telefonica-recomenzamos-thumbnail.component';
+import { NgComponentOutlet } from '@angular/common';
 
 @Component({
   selector: 'app-recomendados',
@@ -16,17 +17,26 @@ import { TelefonicaRecomenzamosThumbnailComponent } from './telefonica-recomenza
     ZiknesThumbnailComponent,
     MetroMuralThumbnailComponent,
     SqmAmintecThumbnailComponent,
-    TelefonicaRecomenzamosThumbnailComponent
+    TelefonicaRecomenzamosThumbnailComponent,
+    NgComponentOutlet
   ],
   templateUrl: './recomendados.component.html',
   styleUrl: './recomendados.component.css'
 })
-export class RecomendadosComponent {
 
+export class RecomendadosComponent {
+  
   constructor(private videosRecomendadosService: VideosRecomendadosService,) { }
+  
+  public compo: any = [GascoAutogasThumbnailComponent, VolkswagenLastChanceThumbnailComponent, ZiknesThumbnailComponent, MetroMuralThumbnailComponent, SqmAmintecThumbnailComponent, TelefonicaRecomenzamosThumbnailComponent]
 
   get recomendados() {
     return this.videosRecomendadosService.videosRecomendados;
+  }
+  
+  ngAfterViewInit(): void {
+    // console.log("this.recomendados");
+    // console.log(this.recomendados);
   }
 
 }
