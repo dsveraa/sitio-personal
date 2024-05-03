@@ -50,7 +50,7 @@ export class RecomendadosComponent
     TelefonicaRecomenzamosThumbnailComponent
   ]
  
-  elegir3Videos(numero) {
+  elegir3Videos(numero: number) {
     
     let recomendados: any = [];
     

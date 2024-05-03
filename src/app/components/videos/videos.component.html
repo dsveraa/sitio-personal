@@ -1,93 +1,123 @@
-<router-outlet/>
-
-<header class="container py-5">
-    <p class="titulo">Mira esto</p>
-    <section class="articulos">
-        <article>
-            <p>Aquí verás una muestra del estilo de diseño y animación que he podido realizar los ultimos años. Si lo
-                que buscas no está aquí, pero tienes una referencia, simplemente conversemos y lo hacemos. <br /><br />
-                ¡No hay nada imposible! Parte de mi trabajo es solucionar problemas desafiantes.
-            </p>
-        </article>
-        <article class="show">
-            <p class="text-secondary">Here you'll see a sample of the design and animation style I've been able to
-                create over the past few years. If what you're looking for isn't here, but you have a reference, just
-                let's talk and we'll make it happen. <br /><br /> Nothing is impossible! Part of my job is solving
-                challenging problems.
-            </p>
-
-        </article>
-    </section>
-</header>
-
-<section class="container-fluid">
-    <div class="row">
-        <div class="col-xl-6 pb-4">
-            <div class="img-container pointer">
-                <img class="img-fluid" routerLink="/gasco-autogas" (click)="enviarNumero(0)" (mouseenter)="playVideo(videoGasco)" (mouseleave)="pauseVideo(videoGasco)"  src="../../../assets/img/gasco_3.webp" alt="">
-                <video routerLink="/gasco-autogas" (click)="enviarNumero(0)"(mouseenter)="playVideo(videoGasco)" (mouseleave)="pauseVideo(videoGasco)" #videoGasco class="video-overlay" loop muted (loadedmetadata)="playOnLoad(videoGasco)">
-                    <source src="../../../assets/video/gasco_1.webm" type="video/webm">
-                </video>
-            </div>
-            <div class="d-flex flex-column align-items-center">
-                <h3><strong>Gasco</strong> Autogas</h3>
-            </div>
-        </div>
-        <div class="col-xl-6 pb-4">
-            <div class="img-container pointer">
-                <img class="img-fluid" routerLink="/volkswagen-last-chance" (click)="enviarNumero(1)" (mouseenter)="playVideo(videoVolkswagen)" (mouseleave)="pauseVideo(videoVolkswagen)" src="../../../assets/img/vw_2.webp" alt="">
-                <video routerLink="/volkswagen-last-chance" (click)="enviarNumero(1)" (mouseenter)="playVideo(videoVolkswagen)" (mouseleave)="pauseVideo(videoVolkswagen)" #videoVolkswagen class="video-overlay" loop muted (loadedmetadata)="playOnLoad(videoVolkswagen)">
-                    <source src="../../../assets/video/vw_1.webm" type="video/webm">
-                </video>
-            </div>
-            <div class="d-flex flex-column align-items-center">
-                <h3><strong>Volkswagen</strong> Last Chance</h3>
-            </div>
-        </div>
-        <div class="col-xl-6 pb-4">
-            <div class="img-container pointer">
-                <img class="img-fluid" routerLink="/ziknes-printer" (click)="enviarNumero(2)" (mouseenter)="playVideo(videoZiknes)" (mouseleave)="pauseVideo(videoZiknes)" src="../../../assets/img/zikness_1.webp" alt="">
-                <video routerLink="/ziknes-printer" (click)="enviarNumero(2)" (mouseenter)="playVideo(videoZiknes)" (mouseleave)="pauseVideo(videoZiknes)" #videoZiknes class="video-overlay" loop muted (loadedmetadata)="playOnLoad(videoZiknes)">
-                    <source src="../../../assets/video/ziknes.webm" type="video/webm">
-                </video>
-            </div>
-            <div class="d-flex flex-column align-items-center">
-                <h3><strong>Ziknes</strong> 3D Metal Printer</h3>
-            </div>
-        </div>
-        <div class="col-xl-6 pb-4">
-            <div class="img-container pointer">
-                <img class="img-fluid" routerLink="/metro-mural" (click)="enviarNumero(3)" (mouseenter)="playVideo(videoMetro)" (mouseleave)="pauseVideo(videoMetro)" src="../../../assets/img/epeukuife_1.webp" alt="">
-                <video routerLink="/metro-mural" (click)="enviarNumero(3)" (mouseenter)="playVideo(videoMetro)" (mouseleave)="pauseVideo(videoMetro)" #videoMetro class="video-overlay" loop muted (loadedmetadata)="playOnLoad(videoMetro)">
-                    <source src="../../../assets/video/epeukuife.webm" type="video/webm">
-                </video>
-            </div>
-            <div class="d-flex flex-column align-items-center">
-                <h3><strong>Metro</strong> Mural Preview</h3>
-                <p></p>
-            </div>
-        </div>
-        <div class="col-xl-6 pb-4">
-            <div class="img-container pointer">
-                <img class="img-fluid" routerLink="/sqm-amintec" (click)="enviarNumero(4)" (mouseenter)="playVideo(videoSQM)" (mouseleave)="pauseVideo(videoSQM)" src="../../../assets/img/sqm_1.webp" alt="">
-                <video routerLink="/sqm-amintec" (click)="enviarNumero(4)" (mouseenter)="playVideo(videoSQM)" (mouseleave)="pauseVideo(videoSQM)" #videoSQM class="video-overlay" loop muted (loadedmetadata)="playOnLoad(videoSQM)">
-                    <source src="../../../assets/video/amintec.webm" type="video/webm">
-                </video>
-            </div>
-            <div class="d-flex flex-column align-items-center">
-                <h3><strong>SQM</strong> Amintec AS</h3>
-            </div>
-        </div>
-        <div class="col-xl-6 pb-4">
-            <div class="img-container pointer">
-                <img class="img-fluid" routerLink="/telefonica-recomenzamos" (click)="enviarNumero(5)" (mouseenter)="playVideo(videoTelefonica)" (mouseleave)="pauseVideo(videoTelefonica)" src="../../../assets/img/telefonica_1.webp" alt="">
-                <video routerLink="/telefonica-recomenzamos" (click)="enviarNumero(5)" (mouseenter)="playVideo(videoTelefonica)" (mouseleave)="pauseVideo(videoTelefonica)" #videoTelefonica class="video-overlay" loop muted (loadedmetadata)="playOnLoad(videoTelefonica)">
-                    <source src="../../../assets/video/recomenzamos.webm" type="video/webm">
-                </video>
-            </div>
-            <div class="d-flex flex-column align-items-center">
-                <h3><strong>Telefónica</strong> Recomenzamos</h3>
-            </div>
+<router-outlet />
+<div class="container-base mt-4">
+    <div class="container-gigante">
+        <div class="container-fluid">
+            <header class="container py-5">
+                <p class="titulo">Mira esto</p>
+                <section class="articulos">
+                    <article>
+                        <p>Aquí verás una muestra del estilo de diseño y animación que he podido realizar los ultimos años. Si lo
+                            que buscas no está aquí, pero tienes una referencia, simplemente conversemos y lo hacemos. <br /><br />
+                            ¡No hay nada imposible! Parte de mi trabajo es solucionar problemas desafiantes.
+                        </p>
+                    </article>
+                    <article class="show">
+                        <p class="text-secondary">Here you'll see a sample of the design and animation style I've been able to
+                            create over the past few years. If what you're looking for isn't here, but you have a reference, just
+                            let's talk and we'll make it happen. <br /><br /> Nothing is impossible! Part of my job is solving
+                            challenging problems.
+                        </p>
+            
+                    </article>
+                </section>
+            </header>
+            
+            <section class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-6 pb-4">
+                        <div class="img-container pointer">
+                            <img class="img-fluid" routerLink="/gasco-autogas" (click)="enviarNumero(0)"
+                                (mouseenter)="playVideo(videoGasco)" (mouseleave)="pauseVideo(videoGasco)"
+                                src="../../../assets/img/gasco_3.webp" alt="">
+                            <video routerLink="/gasco-autogas" (click)="enviarNumero(0)" (mouseenter)="playVideo(videoGasco)"
+                                (mouseleave)="pauseVideo(videoGasco)" #videoGasco class="video-overlay" loop muted
+                                (loadedmetadata)="playOnLoad(videoGasco)">
+                                <source src="../../../assets/video/gasco_1.webm" type="video/webm">
+                            </video>
+                        </div>
+                        <div class="d-flex flex-column align-items-center">
+                            <h3><strong>Gasco</strong> Autogas</h3>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 pb-4">
+                        <div class="img-container pointer">
+                            <img class="img-fluid" routerLink="/volkswagen-last-chance" (click)="enviarNumero(1)"
+                                (mouseenter)="playVideo(videoVolkswagen)" (mouseleave)="pauseVideo(videoVolkswagen)"
+                                src="../../../assets/img/vw_2.webp" alt="">
+                            <video routerLink="/volkswagen-last-chance" (click)="enviarNumero(1)"
+                                (mouseenter)="playVideo(videoVolkswagen)" (mouseleave)="pauseVideo(videoVolkswagen)"
+                                #videoVolkswagen class="video-overlay" loop muted (loadedmetadata)="playOnLoad(videoVolkswagen)">
+                                <source src="../../../assets/video/vw_1.webm" type="video/webm">
+                            </video>
+                        </div>
+                        <div class="d-flex flex-column align-items-center">
+                            <h3><strong>Volkswagen</strong> Last Chance</h3>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 pb-4">
+                        <div class="img-container pointer">
+                            <img class="img-fluid" routerLink="/ziknes-printer" (click)="enviarNumero(2)"
+                                (mouseenter)="playVideo(videoZiknes)" (mouseleave)="pauseVideo(videoZiknes)"
+                                src="../../../assets/img/zikness_1.webp" alt="">
+                            <video routerLink="/ziknes-printer" (click)="enviarNumero(2)" (mouseenter)="playVideo(videoZiknes)"
+                                (mouseleave)="pauseVideo(videoZiknes)" #videoZiknes class="video-overlay" loop muted
+                                (loadedmetadata)="playOnLoad(videoZiknes)">
+                                <source src="../../../assets/video/ziknes.webm" type="video/webm">
+                            </video>
+                        </div>
+                        <div class="d-flex flex-column align-items-center">
+                            <h3><strong>Ziknes</strong> 3D Metal Printer</h3>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 pb-4">
+                        <div class="img-container pointer">
+                            <img class="img-fluid" routerLink="/metro-mural" (click)="enviarNumero(3)"
+                                (mouseenter)="playVideo(videoMetro)" (mouseleave)="pauseVideo(videoMetro)"
+                                src="../../../assets/img/epeukuife_1.webp" alt="">
+                            <video routerLink="/metro-mural" (click)="enviarNumero(3)" (mouseenter)="playVideo(videoMetro)"
+                                (mouseleave)="pauseVideo(videoMetro)" #videoMetro class="video-overlay" loop muted
+                                (loadedmetadata)="playOnLoad(videoMetro)">
+                                <source src="../../../assets/video/epeukuife.webm" type="video/webm">
+                            </video>
+                        </div>
+                        <div class="d-flex flex-column align-items-center">
+                            <h3><strong>Metro</strong> Mural Preview</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 pb-4">
+                        <div class="img-container pointer">
+                            <img class="img-fluid" routerLink="/sqm-amintec" (click)="enviarNumero(4)"
+                                (mouseenter)="playVideo(videoSQM)" (mouseleave)="pauseVideo(videoSQM)"
+                                src="../../../assets/img/sqm_1.webp" alt="">
+                            <video routerLink="/sqm-amintec" (click)="enviarNumero(4)" (mouseenter)="playVideo(videoSQM)"
+                                (mouseleave)="pauseVideo(videoSQM)" #videoSQM class="video-overlay" loop muted
+                                (loadedmetadata)="playOnLoad(videoSQM)">
+                                <source src="../../../assets/video/amintec.webm" type="video/webm">
+                            </video>
+                        </div>
+                        <div class="d-flex flex-column align-items-center">
+                            <h3><strong>SQM</strong> Amintec AS</h3>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 pb-4">
+                        <div class="img-container pointer">
+                            <img class="img-fluid" routerLink="/telefonica-recomenzamos" (click)="enviarNumero(5)"
+                                (mouseenter)="playVideo(videoTelefonica)" (mouseleave)="pauseVideo(videoTelefonica)"
+                                src="../../../assets/img/telefonica_1.webp" alt="">
+                            <video routerLink="/telefonica-recomenzamos" (click)="enviarNumero(5)"
+                                (mouseenter)="playVideo(videoTelefonica)" (mouseleave)="pauseVideo(videoTelefonica)"
+                                #videoTelefonica class="video-overlay" loop muted (loadedmetadata)="playOnLoad(videoTelefonica)">
+                                <source src="../../../assets/video/recomenzamos.webm" type="video/webm">
+                            </video>
+                        </div>
+                        <div class="d-flex flex-column align-items-center">
+                            <h3><strong>Telefónica</strong> Recomenzamos</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
-</section>
+</div>
+

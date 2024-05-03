@@ -13,7 +13,7 @@ export class TelefonicaRecomenzamosComponent {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
 
-  @ViewChild('ancla') ancla: ElementRef;
+  @ViewChild('ancla') ancla!: ElementRef;
 
   ngAfterViewInit(): void {
     this.scrollAncla();

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-blender',
@@ -9,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class BlenderComponent {
 
+  altoOriginal: number = 60;
+  anchoOriginal: number = 80;
+
+  @Input() size!: number; 
 }

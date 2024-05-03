@@ -4,7 +4,8 @@
             <div class="row">
                 <div class="col-12">
                     <div #ancla class="video-container">
-                        <iframe src="https://player.vimeo.com/video/828597636?h=7713a0d1a0" allowfullscreen></iframe>
+                        <app-gasco/>
+                        <!-- <iframe src="https://player.vimeo.com/video/828597636?h=7713a0d1a0" allowfullscreen></iframe> -->
                     </div>
                 </div>
                 <div class="col-6 ">
@@ -12,14 +13,18 @@
                     <h5 class="mb-4">Autogas</h5>
                 </div>
                 <div class="col-6 ">
-                    <h2>Gasco</h2>
-                    <h5 class="mb-4">Autogas</h5>
+                    <div class="d-flex justify-content-end gap-3 mt-2">
+                        <div matTooltip="Info about the action">
+                            <app-blender [size]="40" />
+                        </div>
+                        <app-ae [size]="40" />
+                        <app-audition [size]="40" />
+                    </div>
                 </div>
-
             </div>
             <div class="row">
                 <!-- videos recomendados -->
-                <app-recomendados/>
+                <app-recomendados />
             </div>
         </div>
     </div>
