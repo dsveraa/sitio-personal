@@ -1,0 +1,8 @@
+.flex-item {
+    flex-grow: 1; /* Permite que los elementos crezcan */
+    flex-basis: 150px; /* Establece el tamaño base mínimo */
+    margin: 5px; /* Margen entre los elementos */
+    max-width: calc(33.33% - 10px); /* Ajusta el tamaño máximo */
+    box-sizing: border-box; /* Incluye el margen en el tamaño del elemento */
+}
+

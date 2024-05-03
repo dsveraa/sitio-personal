@@ -10,7 +10,6 @@ import { ZiknesPrinterComponent } from './components/video-pages/ziknes-printer/
 import { MetroMuralComponent } from './components/video-pages/metro-mural/metro-mural.component';
 import { SqmAmintecComponent } from './components/video-pages/sqm-amintec/sqm-amintec.component';
 import { TelefonicaRecomenzamosComponent } from './components/video-pages/telefonica-recomenzamos/telefonica-recomenzamos.component';
-import { IconsComponent } from './test/icons/icons.component';
 
 export const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -24,7 +23,5 @@ export const routes: Routes = [
     { path: 'metro-mural', component: MetroMuralComponent},
     { path: 'sqm-amintec', component: SqmAmintecComponent},
     { path: 'telefonica-recomenzamos', component: TelefonicaRecomenzamosComponent},
-    { path: 'icons', component: IconsComponent},
-    // { path: 'loader', component: VideoLoaderComponent},
     { path: '', redirectTo: '/icons', pathMatch: 'full' },
 ];
