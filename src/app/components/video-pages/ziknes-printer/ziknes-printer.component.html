@@ -7,15 +7,21 @@
                         <iframe src="https://player.vimeo.com/video/872956649?h=bb192b3439" allowfullscreen></iframe>
                     </div>
                 </div>
-                <div class="col-12 ">
+                <div class="col-6 ">
                     <h2>Ziknes</h2>
                     <h5 class="mb-4">3D Metal Printer</h5>
-                    <p class="descripcion-videos">Aquí una descripción del proyecto</p>
+                </div>
+                <div class="col-6 ">
+                    <div class="d-flex justify-content-end gap-3 mt-2">
+                        <app-blender [size]="iconSize" />
+                        <app-ae [size]="iconSize" />
+                        <app-ai [size]="iconSize" />
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <!-- videos recomendados -->
-                <app-recomendados/>
+                <app-recomendados />
             </div>
         </div>
     </div>

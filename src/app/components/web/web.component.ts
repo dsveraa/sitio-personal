@@ -1,5 +1,6 @@
-import { Component, ElementRef, ViewChild, HostListener } from '@angular/core';
+import { Component, ElementRef, ViewChild, HostListener, OnInit } from '@angular/core';
 import { VideoLoaderComponent } from '../video-loader/video-loader.component';
+import { BoxAnimationService } from '../../services/box-animation.service';
 
 @Component({
   selector: 'app-web',
@@ -10,13 +11,24 @@ import { VideoLoaderComponent } from '../video-loader/video-loader.component';
   templateUrl: './web.component.html',
   styleUrl: './web.component.css'
 })
-export class WebComponent {
+export class WebComponent implements OnInit{
+
+constructor(private animationService: BoxAnimationService) {}
 
   showLoader = true;
 
   videoLoaded() {
     this.showLoader = false; 
   }
+
+  ngOnInit(): void {
+  this.animarEntrada();  
+  }
+  
+  animarEntrada() {
+    this.animationService.animateElementInit('boxWeb');
+  }
+    
 
 //   @ViewChild('contenedorMobile') contenedor!: ElementRef;
 

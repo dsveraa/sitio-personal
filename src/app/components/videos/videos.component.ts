@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 // import { VideosRecomendadosService } from '../../services/videos-recomendados.service';
-// import { BoxAnimationService } from '../../services/box-animation.service';
+import { BoxAnimationService } from '../../services/box-animation.service';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { VideoActualService } from '../../services/video-actual.service';
 
@@ -11,7 +11,7 @@ import { VideoActualService } from '../../services/video-actual.service';
   templateUrl: './videos.component.html',
   styleUrl: './videos.component.css'
 })
-export class VideosComponent implements OnInit {
+export class VideosComponent implements OnInit{
   @ViewChild('videoGasco') videoGasco!: ElementRef<HTMLVideoElement>;
   @ViewChild('videoVolkswagen') videoVolkswagen!: ElementRef<HTMLVideoElement>;
   @ViewChild('videoZiknes') videoZiknes!: ElementRef<HTMLVideoElement>;
@@ -20,8 +20,7 @@ export class VideosComponent implements OnInit {
   @ViewChild('videoTelefonica') videoTelefonica!: ElementRef<HTMLVideoElement>;
 
   constructor(
-    // private animationService: BoxAnimationService,
-    // private videosRecomendadosService: VideosRecomendadosService,
+    private animationService: BoxAnimationService,
     private videoActualService: VideoActualService,
     private router: Router,
   ) { }
@@ -30,12 +29,13 @@ export class VideosComponent implements OnInit {
     this.videoActualService.enviarNumero(numero);
   }
 
-  ngOnInit(): void {
-    // window.addEventListener('scroll', () => {
-    //   this.animationService.animateElement('box');
-    //   this.animationService.animateElement('box2');
-    // })
+ngOnInit(): void {
+  this.animarEntrada();
+}
+  animarEntrada() {
+    this.animationService.animateElementInit('boxWeb');
   }
+
   playVideo(video: HTMLVideoElement) {
     video.currentTime = 0;
     video.play();
@@ -45,12 +45,6 @@ export class VideosComponent implements OnInit {
   }
   playOnLoad(video: HTMLVideoElement) {
     this.playVideo(video);
-  }
-  gascoAutogas() {
-    this.router.navigate(['/gasco-autogas']);
-  }
-  vwLastChance() {
-    this.router.navigate(['/volkswagen-last-chance']);
   }
 
 }

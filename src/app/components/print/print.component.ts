@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { BoxAnimationService } from '../../services/box-animation.service';
 
 @Component({
   selector: 'app-print',
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
   templateUrl: './print.component.html',
   styleUrl: './print.component.css'
 })
-export class PrintComponent {
+export class PrintComponent implements OnInit {
 
+  constructor(private animationService: BoxAnimationService) { }
+
+  ngOnInit(): void {
+    this.animarEntrada();
+  }
+  animarEntrada() {
+    this.animationService.animateElementInit('boxWeb');
+  }
 }

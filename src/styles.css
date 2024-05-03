@@ -1,8 +1,8 @@
 body {
-    background-image: linear-gradient(to right, #ff0000 0%, #00ff00 50%, #0000ff 100%);
+    /* background-image: linear-gradient(to right, #ff0000 0%, #00ff00 50%, #0000ff 100%);
     background-image: radial-gradient(circle, #ffffff, #e2e2d3);
-    background-image: linear-gradient(to right top, #d4d4d4, #ffffff, #d6d6d6);
-    background-image: linear-gradient(to right top, #e2e2e2, #ebebeb, #ffffff, #fff9d4);
+    background-image: linear-gradient(to right top, #d4d4d4, #ffffff, #d6d6d6); */
+    background-image: linear-gradient(to right top, #e2e2e2, #ffffff, #ffffff, #e2e2e2);
 }
 
 .shadows-into-light-regular {
@@ -147,4 +147,9 @@ h3 {
     cursor: pointer;
 }
 
-
+@keyframes aparicion {
+    0% {
+        transform: translateY(20%);
+        opacity: 0%;
+    }
+}

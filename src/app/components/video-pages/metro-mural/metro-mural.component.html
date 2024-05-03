@@ -7,10 +7,17 @@
                         <iframe src="https://player.vimeo.com/video/873122373?h=5ad564f936" allowfullscreen></iframe>
                     </div>
                 </div>
-                <div class="col-12 ">
+                <div class="col-6 ">
                     <h2>Metro</h2>
                     <h5 class="mb-4">Mural</h5>
-                    <p class="descripcion-videos">Aquí una descripción del proyecto</p>
+                </div>
+                <div class="col-6 ">
+                    <div class="d-flex justify-content-end gap-3 mt-2">
+                        <app-cinema4d [size]="iconSize" />
+                        <app-redshift [size]="iconSize" />
+                        <app-ae [size]="iconSize" />
+                        <app-ps [size]="iconSize" />
+                    </div>
                 </div>
             </div>
             <div class="row">

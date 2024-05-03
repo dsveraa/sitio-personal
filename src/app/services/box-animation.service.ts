@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class BoxAnimationService {
 
   constructor() { }
-  
+
   animateElement(id: string) {
     const elemento = document.getElementById(id);
     const posicionElemento = elemento!.getBoundingClientRect().top;
@@ -16,4 +16,12 @@ export class BoxAnimationService {
       elemento!.style.animation = 'aparicion 1s';
     }
   }
+
+  animateElementInit(id: string) {
+    const elemento = document.getElementById(id);
+    elemento!.style.animation = 'aparicion 1s';
+  }
+
+
 }
+

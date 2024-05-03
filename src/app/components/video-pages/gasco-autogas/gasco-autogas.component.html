@@ -3,8 +3,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <div #ancla class="video-container">
-                        <app-gasco/>
+                    <div class="video-container">
+                        <app-gasco />
                         <!-- <iframe src="https://player.vimeo.com/video/828597636?h=7713a0d1a0" allowfullscreen></iframe> -->
                     </div>
                 </div>
@@ -14,11 +14,9 @@
                 </div>
                 <div class="col-6 ">
                     <div class="d-flex justify-content-end gap-3 mt-2">
-                        <div matTooltip="Info about the action">
-                            <app-blender [size]="40" />
-                        </div>
-                        <app-ae [size]="40" />
-                        <app-audition [size]="40" />
+                        <app-blender [size]="iconSize" />
+                        <app-ae [size]="iconSize" />
+                        <app-audition [size]="iconSize" />
                     </div>
                 </div>
             </div>
@@ -29,4 +27,3 @@
         </div>
     </div>
 </div>
-

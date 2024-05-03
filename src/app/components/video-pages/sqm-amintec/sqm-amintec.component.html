@@ -7,10 +7,15 @@
                         <iframe src="https://player.vimeo.com/video/872993409?h=df75d3a7ac" allowfullscreen></iframe>
                     </div>
                 </div>
-                <div class="col-12 ">
+                <div class="col-6 ">
                     <h2>SQM</h2>
                     <h5 class="mb-4">Amintec AS</h5>
-                    <p class="descripcion-videos">Aquí una descripción del proyecto</p>
+                </div>
+                <div class="col-6 d-flex justify-content-end gap-3 mt-2">
+                    <app-blender [size]="iconSize"/>
+                    <app-ae [size]="iconSize"/> 
+                    <app-cinema4d [size]="iconSize"/>
+                    <app-redshift [size]="iconSize"/>
                 </div>
             </div>
             <div class="row">

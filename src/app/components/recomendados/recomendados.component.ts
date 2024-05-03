@@ -25,16 +25,14 @@ import { Subscription } from 'rxjs';
   styleUrl: './recomendados.component.css'
 })
 
-export class RecomendadosComponent
- implements OnDestroy 
- {
+export class RecomendadosComponent implements OnDestroy  {
 
   numeroRecibido!: number;
+  
   private subscription: Subscription;
 
   constructor(private videoActualService: VideoActualService) {
     this.subscription = this.videoActualService.numero$.subscribe(numero => {
-      console.log(numero)
       this.elegir3Videos(numero);
     });
    }
@@ -72,7 +70,6 @@ export class RecomendadosComponent
         this.listaVideos[numero - 1],
         this.listaVideos[numero + 1]
       );
-      console.log(recomendados);
     } else {
       recomendados.push(
         this.listaVideos[numero - 1],
@@ -82,7 +79,6 @@ export class RecomendadosComponent
     }
     
     this.recomendados = recomendados;
-    console.log(this.recomendados);   
   }
   
   ngOnDestroy() {

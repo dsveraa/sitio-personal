@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-ai',
@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './ai.component.css'
 })
 export class AiComponent {
+  @Input() size!: number; 
+
 
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-ps',
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './ps.component.css'
 })
 export class PsComponent {
-
+  @Input() size!: number; 
 }
