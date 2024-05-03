@@ -23,5 +23,5 @@ export const routes: Routes = [
     { path: 'metro-mural', component: MetroMuralComponent},
     { path: 'sqm-amintec', component: SqmAmintecComponent},
     { path: 'telefonica-recomenzamos', component: TelefonicaRecomenzamosComponent},
-    { path: '', redirectTo: '/icons', pathMatch: 'full' },
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
