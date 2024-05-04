@@ -54,8 +54,8 @@ export class AppComponent implements OnDestroy, OnInit {
 
   ngOnInit(): void {
     window.addEventListener('scroll', () => {
-      this.animationService.animateElement('box1');
-      this.animationService.animateElement('box2');
+      // this.animationService.animateElement('box1');
+      // this.animationService.animateElement('box2');
       this.animationService.animateElement('box3');
       this.animationService.animateElement('box4');
       this.animationService.animateElement('box5');

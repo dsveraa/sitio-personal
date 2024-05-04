@@ -12,7 +12,7 @@ export class BoxAnimationService {
     const posicionElemento = elemento!.getBoundingClientRect().top;
     const tamanoPantalla = window.innerHeight;
 
-    if (posicionElemento! < tamanoPantalla) {
+    if (posicionElemento! <= tamanoPantalla) {
       elemento!.style.animation = 'aparicion 1s';
     }
   }
