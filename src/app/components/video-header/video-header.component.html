@@ -1,5 +1,8 @@
 <header>
-    <video autoplay loop muted [playsInline]="true" poster="../../assets/img/vw-gol.webp">
+    <video autoplay loop muted [playsInline]="true" (loadedmetadata)="videoLoaded()">
         <source src="../../assets/header.mp4" type="video/mp4">
     </video>
+    @if (showLoader) {
+        <app-video-loader/>
+    }
 </header>
