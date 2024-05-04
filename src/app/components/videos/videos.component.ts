@@ -25,7 +25,7 @@ export class VideosComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+    this.isMobile = this.detectMobile();
     this.animarEntrada();
   }
 
