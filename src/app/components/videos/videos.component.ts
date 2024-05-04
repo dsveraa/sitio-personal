@@ -3,6 +3,7 @@ import { BoxAnimationService } from '../../services/box-animation.service';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { VideoActualService } from '../../services/video-actual.service';
 
+
 @Component({
   selector: 'app-videos',
   standalone: true,
@@ -11,6 +12,7 @@ import { VideoActualService } from '../../services/video-actual.service';
   styleUrl: './videos.component.css'
 })
 export class VideosComponent implements OnInit {
+  isMobile!: boolean;
 
   constructor(
     private animationService: BoxAnimationService,
@@ -23,7 +25,13 @@ export class VideosComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
     this.animarEntrada();
+  }
+
+  detectMobile(): boolean {
+    const userAgent = navigator.userAgent.toLowerCase();
+    return /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
   }
   animarEntrada() {
     this.animationService.animateElementInit('boxWeb');
