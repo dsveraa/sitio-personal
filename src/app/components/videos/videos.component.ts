@@ -11,18 +11,12 @@ import { VideoActualService } from '../../services/video-actual.service';
   styleUrl: './videos.component.css'
 })
 export class VideosComponent implements OnInit {
-  isTouchDevice!: boolean;
 
   constructor(
     private animationService: BoxAnimationService,
     private videoActualService: VideoActualService,
-  ) { 
-    this.isTouchDevice = this.detectTouchDevice()
-  }
-
-  private detectTouchDevice(): boolean {
-    return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-  }
+    
+  ) { }
 
   enviarNumero(numero: number) {
     this.videoActualService.enviarNumero(numero);
@@ -36,15 +30,11 @@ export class VideosComponent implements OnInit {
   }
 
   playVideo(video: HTMLVideoElement) {
-    if (!this.isTouchDevice) {
-      video.currentTime = 0;
-      video.play();
-    }
+    video.currentTime = 0;
+    video.play();
   }
   pauseVideo(video: HTMLVideoElement) {
-    if (!this.isTouchDevice) {
-      video.pause();
-    }
+    video.pause();
   }
 
 }
