@@ -5,6 +5,7 @@ import { BlenderComponent } from '../../icons/blender/blender.component';
 import { AiComponent } from '../../icons/ai/ai.component';
 import { AeComponent } from '../../icons/ae/ae.component';
 import { IconsSizeService } from '../../../services/icons-size.service';
+import { ZiknesComponent } from '../../videos/ziknes/ziknes.component';
 
 @Component({
   selector: 'app-ziknes-printer',
@@ -14,6 +15,7 @@ import { IconsSizeService } from '../../../services/icons-size.service';
     BlenderComponent,
     AeComponent,
     AiComponent,
+    ZiknesComponent
   ],
   templateUrl: './ziknes-printer.component.html',
   styleUrl: './ziknes-printer.component.css'
@@ -23,6 +25,8 @@ export class ZiknesPrinterComponent implements OnInit {
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
     private _iconSizeService: IconsSizeService,
+  
+    
   ) { }
   
   iconSize: any;

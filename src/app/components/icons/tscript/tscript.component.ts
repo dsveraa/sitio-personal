@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tscript',
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './tscript.component.css'
 })
 export class TscriptComponent {
-
+@Input() size:any;
 }

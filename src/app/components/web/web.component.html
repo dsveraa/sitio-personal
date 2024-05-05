@@ -1,35 +1,64 @@
-<header id="boxWeb" class="container py-5">
-    <p class="titulo">www</p>
-    <section class="articulos">
-        <article>
-            <p>Actualmente estoy usando como tecología de desarrollo la plataforma Angular. Esta me permite separar la vista de la lógica de programación, basada en TypeScript y se pueden hacer cosas interesantes.<br><br>Para estilar ocupo frameworks como Bootstrap o Tailwind, los cuales facilitan la maquetación y el diseño responsive que se adapta a cualquier dispositivo.
-            </p>
-        </article>
-        <article class="show">
-            <p class="text-secondary">Currently I'm using Angular as my development technology platform. It allows me to separate the view from the programming logic, based on TypeScript, and you can do interesting things with it.<br><br>To style, I use frameworks like Bootstrap or Tailwind, which make layout and responsive design easy to adapt to any device.
-            </p>
+<main class="container-base mt-4">
+    <main class="container-gigante">
+        <div class="container-fluid">
+            <header id="boxWeb" class="container py-5">
+                <p class="titulo">www</p>
+                <section class="articulos">
+                    <article>
+                        <p>Actualmente estoy usando como tecología de desarrollo la plataforma Angular. Esta me permite
+                            separar la vista de la lógica de programación, basada en TypeScript y se pueden hacer cosas
+                            interesantes.<br><br>Para estilar ocupo frameworks como Bootstrap o Tailwind, los cuales
+                            facilitan la maquetación y el diseño responsive que se adapta a cualquier dispositivo.
+                        </p>
+                    </article>
+                    <article class="show">
+                        <p class="text-secondary">Currently I'm using Angular as my development technology platform. It
+                            allows me to separate the view from the programming logic, based on TypeScript, and you can
+                            do interesting things with it.<br><br>To style, I use frameworks like Bootstrap or Tailwind,
+                            which make layout and responsive design easy to adapt to any device.
+                        </p>
 
-        </article>
-    </section>
-</header>
+                    </article>
+                </section>
+            </header>
 
-<div class="container">
-    <div class="d-flex flex-column align-items-center gap-5">
-        <div class="video-container">
-            <video autoplay loop muted [playsInline]="true" (loadedmetadata)="videoLoaded()">
-                <source src="../../../assets/video/musicarte-responsive-w1400.webm" type="video/webm">
-                <source src="../../../assets/video/musicarte-responsive-w1400.mp4" type="video/mp4">
-            </video>
-            @if (showLoader) {
-                <app-video-loader/>
-            }
+            <h1 class="text-center ">Wireframe</h1>
+            <picture class="d-flex flex-column align-items-center mt-5">
+                <img class="img-fluid " src="../../../assets/img/web/landing-wireframe_low.png" alt="" srcset="">
+            </picture>
+            <!-- <picture>
+                <img class="img-fluid" src="../../../assets/img/web/TypeScript0001.jpg" alt="" srcset="">
+            </picture> -->
+            
+            
+            <!-- <div class="d-flex flex-column align-items-center gap-5">
+                <div class="video-container">
+                    <video autoplay loop muted [playsInline]="true" (loadedmetadata)="videoLoaded()">
+                        <source src="../../../assets/video/musicarte-responsive-w1400.webm" type="video/webm">
+                        <source src="../../../assets/video/musicarte-responsive-w1400.mp4" type="video/mp4">
+                    </video>
+                    @if (showLoader) {
+                        <app-video-loader />
+                    }
+                </div>
+            </div> -->
         </div>
-        <!-- <div class="large-image-container">
-            <img src="../../../assets/img/desktop-musicarte.png" alt="Imagen grande">
+    </main>
+</main>
+<section class="mt-5">
+    <h3 class="text-center text-secondary text-uppercase ">Tecnologías</h3>
+    <div class="container-fluid bg-body-secondary ">
+        <div class="container my-3">
+            <div class="d-flex justify-content-around gap-1 img-fluid">
+                <app-html5 [size]="iconSize" />
+                <app-css3 [size]="iconSize" />
+                <app-js [size]="iconSize" />
+                <app-angular [size]="iconSize" />
+                <app-tscript [size]="iconSize" />
+                <app-bootstrap [size]="iconSize" />
+                <app-git [size]="iconSize" />
+                <app-vscode [size]="iconSize" />
+            </div>
         </div>
-        <div class="contenedor-mobile" #contenedorMobile (mousedown)="onMouseDown($event)"
-            (mousemove)="onMouseMove($event)" (mouseup)="onMouseUp()" (mouseleave)="onMouseLeave()">
-            <img src="../../../assets/img/celular-musicarte.png" alt="">
-        </div>
-    </div> -->
-</div>
+    </div>
+</section>

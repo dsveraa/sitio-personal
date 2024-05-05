@@ -6,6 +6,7 @@ import { AiComponent } from '../../icons/ai/ai.component';
 import { AeComponent } from '../../icons/ae/ae.component';
 import { IconsSizeService } from '../../../services/icons-size.service';
 import { PsComponent } from '../../icons/ps/ps.component';
+import { VolkswagenComponent } from '../../videos/volkswagen/volkswagen.component';
 
 @Component({
   selector: 'app-volkswagen-last-chance',
@@ -15,7 +16,8 @@ import { PsComponent } from '../../icons/ps/ps.component';
     BlenderComponent,
     PsComponent,
     AiComponent,
-    AeComponent
+    AeComponent,
+    VolkswagenComponent
   ],
   templateUrl: './volkswagen-last-chance.component.html',
   styleUrl: './volkswagen-last-chance.component.css'

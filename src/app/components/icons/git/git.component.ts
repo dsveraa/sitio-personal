@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-git',
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './git.component.css'
 })
 export class GitComponent {
-
+@Input() size:any;
 }

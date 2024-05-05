@@ -1,11 +1,11 @@
 import { Component, ElementRef, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
 import { RecomendadosComponent } from '../../recomendados/recomendados.component';
-import { isPlatformBrowser } from '@angular/common';
 import { Cinema4dComponent } from '../../icons/cinema4d/cinema4d.component';
 import { RedshiftComponent } from '../../icons/redshift/redshift.component';
 import { BlenderComponent } from '../../icons/blender/blender.component';
 import { AeComponent } from '../../icons/ae/ae.component';
 import { IconsSizeService } from '../../../services/icons-size.service';
+import { SqmComponent } from '../../videos/sqm/sqm.component';
 
 @Component({
   selector: 'app-sqm-amintec',
@@ -15,7 +15,8 @@ import { IconsSizeService } from '../../../services/icons-size.service';
     Cinema4dComponent,
     RedshiftComponent,
     BlenderComponent,
-    AeComponent
+    AeComponent,
+    SqmComponent
   ],
   templateUrl: './sqm-amintec.component.html',
   styleUrl: './sqm-amintec.component.css'

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-bootstrap',
@@ -9,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class BootstrapComponent {
 
+  altoOriginal: number = 60;
+  anchoOriginal: number = 62;
+
+  @Input() size!:number;
 }

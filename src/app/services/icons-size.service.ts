@@ -1,12 +1,12 @@
-import { Injectable } from '@angular/core';
+import { HostListener, Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class IconsSizeService {
 
-  iconsSize: number = 45;
+  iconsSize: number = 30;
 
-  constructor() { }
 
 }

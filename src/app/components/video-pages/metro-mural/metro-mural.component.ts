@@ -1,11 +1,11 @@
 import { Component, ElementRef, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
 import { RecomendadosComponent } from '../../recomendados/recomendados.component';
-import { isPlatformBrowser } from '@angular/common';
 import { IconsSizeService } from '../../../services/icons-size.service';
 import { Cinema4dComponent } from '../../icons/cinema4d/cinema4d.component';
 import { AeComponent } from '../../icons/ae/ae.component';
 import { RedshiftComponent } from '../../icons/redshift/redshift.component';
 import { PsComponent } from '../../icons/ps/ps.component';
+import { MetroComponent } from '../../videos/metro/metro.component';
 
 @Component({
   selector: 'app-metro-mural',
@@ -16,6 +16,7 @@ import { PsComponent } from '../../icons/ps/ps.component';
     AeComponent,
     RedshiftComponent,
     PsComponent,
+    MetroComponent
   ],
   templateUrl: './metro-mural.component.html',
   styleUrl: './metro-mural.component.css'
@@ -37,13 +38,9 @@ export class MetroMuralComponent implements OnInit {
   
   ngAfterViewInit(): void {
     window.scrollTo({top: 0, behavior: 'smooth'})
-    // this.scrollAncla();
+
   }
 
-  // scrollAncla() {
-  //   if (isPlatformBrowser(this.platformId)) {
-  //     this.ancla.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  //   }
-  // }
+
 
 }

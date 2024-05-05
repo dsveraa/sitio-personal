@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-vscode',
@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './vscode.component.css'
 })
 export class VscodeComponent {
+  @Input() size:any;
 
 }

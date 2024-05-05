@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-html5',
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './html5.component.css'
 })
 export class Html5Component {
-
+@Input() size?: any;
 }

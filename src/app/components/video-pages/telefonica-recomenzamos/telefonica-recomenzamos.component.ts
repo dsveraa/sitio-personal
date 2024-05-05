@@ -5,6 +5,7 @@ import { Cinema4dComponent } from '../../icons/cinema4d/cinema4d.component';
 import { RedshiftComponent } from '../../icons/redshift/redshift.component';
 import { ResolveComponent } from '../../icons/resolve/resolve.component';
 import { IconsSizeService } from '../../../services/icons-size.service';
+import { TelefonicaComponent } from '../../videos/telefonica/telefonica.component';
 @Component({
   selector: 'app-telefonica-recomenzamos',
   standalone: true,
@@ -12,7 +13,8 @@ import { IconsSizeService } from '../../../services/icons-size.service';
     RecomendadosComponent,
     Cinema4dComponent,
     RedshiftComponent,
-    ResolveComponent
+    ResolveComponent,
+    TelefonicaComponent
   ],
   templateUrl: './telefonica-recomenzamos.component.html',
   styleUrl: './telefonica-recomenzamos.component.css'

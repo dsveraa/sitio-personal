@@ -18,10 +18,9 @@ export class BoxAnimationService {
   }
 
   animateElementInit(id: string) {
-    const elemento = document.getElementById(id);
-    elemento!.style.animation = 'aparicion 1s';
+    if (typeof document !== 'undefined') {
+      const elemento = document.getElementById(id);
+      elemento!.style.animation = 'aparicion 1s';
+    }
   }
-
-
 }
-

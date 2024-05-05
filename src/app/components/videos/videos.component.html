@@ -1,5 +1,5 @@
 <router-outlet />
-<div class="container-base mt-4">
+<main class="container-base mt-4">
     <div class="container-gigante">
         <div class="container-fluid">
             <header id="boxWeb" class="container py-5">
@@ -26,13 +26,13 @@
                     </article>
                 </section>
             </header>
-            <section class="container-fluid">
-                <div class="row">
-                    <div id="box1" class="col-xl-6 pb-4">
+            <main class="container-fluid">
+                <section class="row">
+                    <article id="box1" class="col-xl-6 pb-4">
                         <div class="img-container pointer">
                             <img routerLink="/gasco-autogas" (click)="enviarNumero(0)" class="img-fluid" src="../../../assets/img/gasco_3.webp" alt="">
                             @if (!isMobile) {
-                                <video routerLink="/gasco-autogas" (click)="enviarNumero(0)" class="video-overlay" (mouseenter)="playVideo(videoGasco)" (mouseleave)="pauseVideo(videoGasco)" #videoGasco loop muted>
+                                <video routerLink="/gasco-autogas" (click)="enviarNumero(0)" class="video-overlay" (mouseenter)="playVideo(gasco)" (mouseleave)="pauseVideo(gasco)" #gasco loop muted>
                                     <source src="../../../assets/video/gasco_1.webm" type="video/webm">
                                     <source src="../../../assets/video/gasco_1.mp4" type="video/mp4">
                                 </video>
@@ -41,12 +41,12 @@
                         <div class="d-flex flex-column align-items-center">
                             <h3><strong>Gasco</strong> Autogas</h3>
                         </div>
-                    </div>
-                    <div id="box2" class="col-xl-6 pb-4">
+                    </article>
+                    <article id="box2" class="col-xl-6 pb-4">
                         <div class="img-container pointer">
                             <img routerLink="/volkswagen-last-chance" (click)="enviarNumero(1)" class="img-fluid" src="../../../assets/img/vw_2.webp" alt="">
                             @if (!isMobile) {
-                                <video routerLink="/volkswagen-last-chance" (click)="enviarNumero(1)" class="video-overlay" (mouseenter)="playVideo(videoVolkswagen)" (mouseleave)="pauseVideo(videoVolkswagen)" #videoVolkswagen loop muted>
+                                <video routerLink="/volkswagen-last-chance" (click)="enviarNumero(1)" class="video-overlay" (mouseenter)="playVideo(vw)" (mouseleave)="pauseVideo(vw)" #vw loop muted>
                                     <source src="../../../assets/video/vw_1.webm" type="video/webm">
                                     <source src="../../../assets/video/vw_1.mp4" type="video/mp4">
                                 </video>
@@ -55,41 +55,41 @@
                         <div class="d-flex flex-column align-items-center">
                             <h3><strong>Volkswagen</strong> Last Chance</h3>
                         </div>
-                    </div>
-                    <div id="box3" class="col-xl-6 pb-4">
+                    </article>
+                    <article id="box3" class="col-xl-6 pb-4">
                         <div class="img-container pointer">
                             <img routerLink="/ziknes-printer" (click)="enviarNumero(2)" class="img-fluid" src="../../../assets/img/zikness_1.webp" alt="">
                             @if (!isMobile) {
-                                <video routerLink="/ziknes-printer" (click)="enviarNumero(2)" class="video-overlay" (mouseenter)="playVideo(videoZiknes)" (mouseleave)="pauseVideo(videoZiknes)" #videoZiknes loop muted>
+                                <video routerLink="/ziknes-printer" (click)="enviarNumero(2)" class="video-overlay" (mouseenter)="playVideo(ziknes)" (mouseleave)="pauseVideo(ziknes)" #ziknes loop muted>
                                 <source src="../../../assets/video/ziknes.webm" type="video/webm">
                                 <source src="../../../assets/video/ziknes.mp4" type="video/mp4">
                             </video>
-                        }
+                            }
                         </div>
                         <div class="d-flex flex-column align-items-center">
                             <h3><strong>Ziknes</strong> 3D Metal Printer</h3>
                         </div>
-                    </div>
-                    <div id="box4" class="col-xl-6 pb-4">
+                    </article>
+                    <article id="box4" class="col-xl-6 pb-4">
                         <div class="img-container pointer">
                             <img routerLink="/metro-mural" (click)="enviarNumero(3)" class="img-fluid" src="../../../assets/img/epeukuife_1.webp" alt="">
-                         @if (!isMobile) {
-                            <video routerLink="/metro-mural" (click)="enviarNumero(3)" class="video-overlay" (mouseenter)="playVideo(videoMetro)" (mouseleave)="pauseVideo(videoMetro)" #videoMetro loop muted>
+                            @if (!isMobile) {
+                            <video routerLink="/metro-mural" (click)="enviarNumero(3)" class="video-overlay" (mouseenter)="playVideo(metro)" (mouseleave)="pauseVideo(metro)" #metro loop muted>
                                 <source src="../../../assets/video/epeukuife.webm" type="video/webm">
                                 <source src="../../../assets/video/epeukuife.mp4" type="video/mp4">
                             </video>
-                        }
+                            }
                         </div>
                         <div class="d-flex flex-column align-items-center">
                             <h3><strong>Metro</strong> Mural Preview</h3>
                             <p></p>
                         </div>
-                    </div>
-                    <div id="box5" class="col-xl-6 pb-4">
+                    </article>
+                    <article id="box5" class="col-xl-6 pb-4">
                         <div class="img-container pointer">
                             <img routerLink="/sqm-amintec" (click)="enviarNumero(4)" class="img-fluid" src="../../../assets/img/sqm_1.webp" alt="">
                             @if (!isMobile) {
-                            <video routerLink="/sqm-amintec" (click)="enviarNumero(4)" class="video-overlay" (mouseenter)="playVideo(videoSQM)" (mouseleave)="pauseVideo(videoSQM)" #videoSQM loop muted>
+                            <video routerLink="/sqm-amintec" (click)="enviarNumero(4)" class="video-overlay" (mouseenter)="playVideo(sqm)" (mouseleave)="pauseVideo(sqm)" #sqm loop muted>
                                 <source src="../../../assets/video/amintec.webm" type="video/webm">
                                 <source src="../../../assets/video/amintec.mp4" type="video/mp4">
                             </video>
@@ -98,23 +98,23 @@
                         <div class="d-flex flex-column align-items-center">
                             <h3><strong>SQM</strong> Amintec AS</h3>
                         </div>
-                    </div>
-                    <div id="box6" class="col-xl-6 pb-4">
+                    </article>
+                    <article id="box6" class="col-xl-6 pb-4">
                         <div class="img-container pointer">
                             <img routerLink="/telefonica-recomenzamos" (click)="enviarNumero(5)" class="img-fluid" src="../../../assets/img/telefonica_1.webp" alt="">
                             @if (!isMobile) {
-                            <video routerLink="/telefonica-recomenzamos" (click)="enviarNumero(5)" (mouseenter)="playVideo(videoTelefonica)" (mouseleave)="pauseVideo(videoTelefonica)" #videoTelefonica class="video-overlay" loop muted>
+                            <video routerLink="/telefonica-recomenzamos" (click)="enviarNumero(5)" class="video-overlay" (mouseenter)="playVideo(telefonica)" (mouseleave)="pauseVideo(telefonica)" #telefonica loop muted>
                                 <source src="../../../assets/video/recomenzamos.webm" type="video/webm">
                                 <source src="../../../assets/video/recomenzamos.mp4" type="video/mp4">
                             </video>
-                        }
+                            }
                         </div>
                         <div class="d-flex flex-column align-items-center">
                             <h3><strong>Telefónica</strong> Recomenzamos</h3>
                         </div>
-                    </div>
-                </div>
-            </section>
+                    </article>
+                </section>
+            </main>
         </div>
     </div>
-</div>
+</main>
