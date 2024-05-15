@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { NavComponent } from './components/nav/nav.component';
 import { InvitacionComponent } from './components/invitacion/invitacion.component';
@@ -30,7 +30,7 @@ import { BoxAnimationService } from './services/box-animation.service';
 export class AppComponent implements OnDestroy, OnInit {
 
   constructor(
-    private _inHome: HomeService, 
+    private _inHome: HomeService,
     private router: Router,
     private animationService: BoxAnimationService,
   ) {
@@ -49,18 +49,21 @@ export class AppComponent implements OnDestroy, OnInit {
       }
     });
   }
-  
+
   private routerSubscription: Subscription;
 
   ngOnInit(): void {
-    window.addEventListener('scroll', () => {
-      // this.animationService.animateElement('box1');
-      // this.animationService.animateElement('box2');
-      this.animationService.animateElement('box3');
-      this.animationService.animateElement('box4');
-      this.animationService.animateElement('box5');
-      this.animationService.animateElement('box6');
-    });
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', () => {
+        // this.animationService.animateElement('box1');
+        // this.animationService.animateElement('box2');
+        this.animationService.animateElement('box3');
+        this.animationService.animateElement('box4');
+        this.animationService.animateElement('box5');
+        this.animationService.animateElement('box6');
+      });
+      console.log(window.innerWidth);
+    }
   }
 
   get home() {
@@ -71,4 +74,5 @@ export class AppComponent implements OnDestroy, OnInit {
   ngOnDestroy(): void {
     this.routerSubscription.unsubscribe();
   }
+
 }
