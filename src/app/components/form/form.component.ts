@@ -2,8 +2,13 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import SubmitJSON from 'submitjson';
 import { ReactiveFormsModule } from '@angular/forms';
+import * as dotenv from 'dotenv';
+dotenv.config();
 
-const sj = new SubmitJSON({ apiKey: 'sjk_998028c6729f4a15957a61ceaf50f067', endpoint: 'xQxkIIMYo' })
+const apiKey = process.env['SJ_API_KEY'] || '';
+const endpoint = process.env['SJ_ENDPOINT'] || '';
+
+const sj = new SubmitJSON({ apiKey, endpoint });
 
 @Component({
   selector: 'app-form',
@@ -27,8 +32,8 @@ export class FormComponent {
   async onSubmit() {
     if (this.contactForm.valid) {
       await sj.submit(this.contactForm.value)
-    this.contactForm.reset();
-    this.showSuccessMessage();
+      this.contactForm.reset();
+      this.showSuccessMessage();
     }
   }
 

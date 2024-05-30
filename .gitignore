@@ -45,3 +45,4 @@ Thumbs.db
 .angular/cache/
 src/assets/source/
 src/app/test/
+.env
