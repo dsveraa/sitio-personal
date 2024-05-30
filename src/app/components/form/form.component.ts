@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import SubmitJSON from 'submitjson';
 import { ReactiveFormsModule } from '@angular/forms';
+import { environment } from '../../../environments/environment';
 
-const sj = new SubmitJSON({ apiKey: 'sjk_998028c6729f4a15957a61ceaf50f067', endpoint: 'xQxkIIMYo' })
+const sj = new SubmitJSON({ apiKey: environment.SJ_API_KEY, endpoint: environment.SJ_ENDPOINT })
 
 @Component({
   selector: 'app-form',
