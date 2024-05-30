@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import SubmitJSON from 'submitjson';
 import { ReactiveFormsModule } from '@angular/forms';
-import dotenv from 'dotenv';
-dotenv.config()
 
 const env = process.env as { SJ_API_KEY: string, SJ_ENDPOINT: string };
 const key = env.SJ_API_KEY;
