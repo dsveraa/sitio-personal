@@ -2,9 +2,15 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import SubmitJSON from 'submitjson';
 import { ReactiveFormsModule } from '@angular/forms';
-// import { environment } from '../../../environments/environment';
+import dotenv from 'dotenv';
+dotenv.config()
 
-const sj = new SubmitJSON({ apiKey: SJ_API_KEY, endpoint: SJ_ENDPOINT })
+const env = process.env as { SJ_API_KEY: string, SJ_ENDPOINT: string };
+const key = env.SJ_API_KEY;
+const enpoint = env.SJ_ENDPOINT;
+
+
+const sj = new SubmitJSON({ apiKey: key, endpoint: enpoint })
 
 @Component({
   selector: 'app-form',

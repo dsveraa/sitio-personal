@@ -6,7 +6,7 @@
     "strict": true, // true,
     // "noImplicitAny": false, // esta linea no estaba
     // "strictNullChecks": false, // esta linea no existía
-    // "strictPropertyInitialization": false, // esta linea no existía
+    "strictPropertyInitialization": false, // esta linea no existía
     // "strictFunctionTypes": false, // esta linea no existía
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
