@@ -4,7 +4,7 @@ import SubmitJSON from 'submitjson';
 import { ReactiveFormsModule } from '@angular/forms';
 // import { environment } from '../../../environments/environment';
 
-const sj = new SubmitJSON({ apiKey: environment.SJ_API_KEY, endpoint: environment.SJ_ENDPOINT })
+const sj = new SubmitJSON({ apiKey: SJ_API_KEY, endpoint: SJ_ENDPOINT })
 
 @Component({
   selector: 'app-form',
